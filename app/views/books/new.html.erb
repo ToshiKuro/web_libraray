@@ -1,2 +1,13 @@
-<h1>Books#new</h1>
-<p>Find me in app/views/books/new.html.erb</p>
+書籍登録フォーム
+
+<%= form_for Book.new do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :author %>
+  <%= form.text_field :author %>
+  <%= form.label :date_of_issue %>
+  <%= form.text_field :date_of_issue %>
+  <%= form.label :summary %>
+  <%= form.text_area :summary %>
+  <%= form.submit %>
+<% end %>
