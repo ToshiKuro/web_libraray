@@ -1,0 +1,10 @@
+= form_for Book.new do |f|
+  = f.label :name
+  = f.text_field :name
+  = f.label :author
+  = f.text_field :author
+  = f.label :date_of_issue
+  = f.text_field :date_of_issue
+  = f.label :summary
+  = f.text_area :summary
+  = f.submit
