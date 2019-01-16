@@ -18,3 +18,9 @@ class UsersController < ApplicationController
   end
 
 end
+
+
+  def create
+    @book = Book.create(book_params)
+    redirect_to '/books/index'  
+  end

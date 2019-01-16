@@ -1,7 +1,16 @@
 %h1 書籍詳細
-%p
-  = @book.id
-  = @book.title
-  = @book.author
-  = @book.date_of_issue
-  = @book.summary
+%table{border: 1}
+  %tr
+    %td タイトル
+    %td= "#{@book.id}" + '.  ' + @book.title
+  %tr
+    %td 著者名
+    %td= @book.author
+  %tr
+    %td 分類
+    %td= @book.genre
+  %tr
+    %td 内容
+    %td= @book.summary
+
+%p= link_to '戻る', books_index_path(@book)

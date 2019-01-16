@@ -2,13 +2,13 @@
 %table{border: 1}
   %tr
     %th タイトル
+    %th 分類
     %th 著者名
-    %th 発刊日
-    %th 内容
+    %th 在架
   - @books.each do |book|
     %tr
       %td= link_to book.title, book_show_path(book)
       / %td= link_to book.name, "books/#{book.id}"
       %td= book.author
-      %td= book.date_of_issue
-      %td= book.summary
+      %td= book.genre
+      %td= book.number
