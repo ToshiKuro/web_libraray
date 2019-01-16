@@ -1,2 +1,11 @@
-%h1 Users#index
-%p Find me in app/views/users/index.html.erb
+%h1 ユーザー 一覧
+%table{border: 1}
+  %tr
+    %th ユーザー名
+    %th 住所
+    %th ログイン
+  - @users.each do |user|
+    %tr
+      %td= link_to user.name, user_login_path(user), data: {confirm: 'ログインしますか？'}
+      %td= user.address
+      %td= user.login
