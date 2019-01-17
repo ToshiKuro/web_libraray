@@ -9,20 +9,30 @@ class UsersController < ApplicationController
   end
 
   def new
+    render plain: params[:user].inspect
+  end
+
+  # def login
+  #   User.update_all(login: '')
+  #   @user = User.find(params[:id])
+  #   @user.login = true
+  #   @user.save
+  #   redirect_to :root
+  # end
+
+  def login_name
+    # @user = params[:name]
   end
 
   def login
-    User.update_all(login: '')
-    @user = User.find(params[:id])
+    # render plain: params[:user].inspect
+    User.update_all(login: false)
+    @user = User.find_by(name: params[:user][:name])
     @user.login = true
     @user.save
-    redirect_to :root
+    redirect_to :action => 'show'
+
+
   end
 
 end
-
-
-  def create
-    @book = Book.create(book_params)
-    redirect_to '/books/index'  
-  end

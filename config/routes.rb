@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   get 'users/index'
   get 'users/show', to: 'users#show', as: 'user_show'
   get 'users/new'
-  get 'users/:id', to: 'users#login', as: 'user_login'
+  get 'users/login_name', to: 'users#login_name'
+  post 'login', to: 'users#login'
+  # get 'users/:id', to: 'users#login', as: 'user_login'
 
   get 'books/top'
   get 'books/index'

@@ -1,4 +1,4 @@
-%h1 利用者 一覧
+%h2 利用者 一覧
 %table{border: 1}
   %tr
     %th ユーザー名
@@ -6,6 +6,6 @@
     %th ログイン
   - @users.each do |user|
     %tr
-      %td= link_to user.name, user_login_path(user), data: {confirm: 'ログインしますか？'}
+      %td= user.name
       %td= user.address
       %td= user.login
