@@ -12,7 +12,7 @@
 @book.genre         = 'スポーツ'
 @book.date_of_issue = '2011.8.9'
 @book.summary       = 'あのメジャー・リーガーも実践！ 170km/hを投げる為の投球術を科学的に図説'
-@book.user_id       =
+@book.user_id       = @user.id
 @book.number        = 3
 @book.save
 

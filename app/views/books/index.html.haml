@@ -1,10 +1,12 @@
-%h1 書籍一覧
+
+%h2 書籍一覧
 %table{border: 1}
   %tr
     %th タイトル
     %th 分類
     %th 著者名
     %th 在架
+    %th user id
   - @books.each do |book|
     %tr
       %td= link_to book.title, book_show_path(book)
@@ -12,3 +14,4 @@
       %td= book.author
       %td= book.genre
       %td= book.number
+      %td= book.user_id

@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+.container {
+  width: 900px;
+  margin: 20px auto;
+}
+
+/*h1.header {
+  float: left;
+}*/
+
+header {
+  border-bottom: 1px solid #ddd
+}

@@ -1,2 +1,18 @@
-%h1 Users#show
-%p Find me in app/views/users/show.html.erb
+%h1 利用者のページ
+
+%table{border: 1}
+  %tr
+    %th ユーザー名
+    %th 住所
+  - @users.each do |user|
+    %tr
+      %td= user.name
+      %td= user.address
+
+  %tr
+    %th ユーザー名
+    %th 住所
+  - @users.each do |user|
+    %tr
+      %td= user.name
+      %td= user.address

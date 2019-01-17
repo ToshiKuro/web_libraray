@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'users/new'
   get 'users/:id', to: 'users#login', as: 'user_login'
 
+  get 'books/top'
   get 'books/index'
   get 'books/:id', to: 'books#show', as: 'book_show'
   post 'books' => 'books#new'

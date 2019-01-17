@@ -1,4 +1,8 @@
 class BooksController < ApplicationController
+
+  def top  
+  end
+
   def index
     @books = Book.all
   end
@@ -26,4 +30,5 @@ class BooksController < ApplicationController
   def book_params
     params.require(:book).permit(:title,:author,:date_of_issue,:summary)
   end
+  
 end
