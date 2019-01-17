@@ -3,17 +3,19 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def show
+  def show    
+    @user = User.find_by(login: true)
+    @books = Book.where(user_id: @user.id)
   end
 
   def new
   end
 
   def login
-    User.update_all(login: false)
-    user = User.find(params[:id])
-    user.login = true
-    user.save
+    User.update_all(login: '')
+    @user = User.find(params[:id])
+    @user.login = true
+    @user.save
     redirect_to :root
   end
 

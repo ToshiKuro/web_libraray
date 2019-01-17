@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: 'books#index'
 
   get 'users/index'
-  get 'users/show'
+  get 'users/show', to: 'users#show', as: 'user_show'
   get 'users/new'
   get 'users/:id', to: 'users#login', as: 'user_login'
 

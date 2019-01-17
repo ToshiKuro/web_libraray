@@ -20,19 +20,19 @@
 
 / -else
 
-  %h1 書籍詳細
-  %table{border: 1}
-    %tr
-      %td タイトル
-      %td= "#{@book.id}" + '.  ' + @book.title
-    %tr
-      %td 著者名
-      %td= @book.author
-    %tr
-      %td 分類
-      %td= @book.genre
-    %tr
-      %td 内容
-      %td= @book.summary
+%h2 書籍詳細
+%table{border: 1}
+  %tr
+    %td タイトル
+    %td= "#{@book.id}" + '.  ' + @book.title
+  %tr
+    %td 著者名
+    %td= @book.author
+  %tr
+    %td 分類
+    %td= @book.genre
+  %tr
+    %td 内容
+    %td= @book.summary
 
-  %p= link_to '戻る', books_index_path(@book)
+%p= link_to '戻る', books_index_path(@book)
