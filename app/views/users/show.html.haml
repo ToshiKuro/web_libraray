@@ -4,20 +4,20 @@
   %p= '名　前：' + @user.name
   %p= '住　所：' + @user.address
   = button_to 'ログアウト', {controller: 'users', action: 'logout'}, {method: :get}
+  %p
 
-%table{border: 1}
-  %tr
-    %th タイトル
-    %th 著者名
-    - if @user.rend1 > 0
+%h3 ＜ 貸出図書一覧 ＞
+- if @books == nil
+  %h4 現在、貸出図書はありません
+- else
+  %table{border: 1}
+    %tr
+      %th タイトル
+      %th 著者名
+      %th 分類
+      / %th 返却期限
+    - @books.each do |book|
       %tr
-        %td= @book1.title
-        %td= @book1.author
-    - if @user.rend2 > 0
-      %tr
-        %td= @book2.title
-        %td= @book2.author
-    - if @user.rend3 > 0
-      %tr
-        %td= @book3.title
-        %td= @book3.author
+        %td= book.title
+        %td= book.author
+        %td= book.genre

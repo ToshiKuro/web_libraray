@@ -13,9 +13,21 @@
         / %img.header{src: '/image1.png', width: 40}
         %h1 WEB Library
         %ul
-          %li= link_to 'TOP', books_top_path(@book)
+          - if User.find_by(login: true) == nil
+            %li= link_to 'TOP', books_top_path(@book)
+          - else
+            %li= link_to 'TOP', books_index_path(@user)
+
           %li= link_to 'ログイン', users_login_name_path(@user)
-          %li= link_to '貸出', users_index_path(@user)
-          %li= link_to '利用者ページ', user_show_path(@user)
+
+          - if User.find_by(login: true) == nil
+            %li= link_to '貸出', users_login_name_path(@user)
+          - else
+            %li= link_to '貸出', users_index_path(@user)
+
+          - if User.find_by(login: true) == nil
+            %li= link_to '利用者ページ', users_login_name_path(@user)
+          - else
+            %li= link_to '利用者ページ', user_show_path(@user)
 
       = yield

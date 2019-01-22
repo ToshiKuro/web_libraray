@@ -5,29 +5,31 @@ class UsersController < ApplicationController
 
   def show    
     @user = User.find_by(login: true)
-    if @user.rend1 > 0
-      @book1 = Book.find(@user.rend1)
+    rend = []
+    (1..3).each do |n|
+      rend.push()
     end
-    if @user.rend1 > 0
-      @book2 = Book.find(@user.rend2)
+    if @user.rend1 == 0 && @user.rend2 == 0 && @user.rend3 == 0
+      @books = nil
+    else
+      @books = Book.find(@user.rend1, @user.rend2, @user.rend3)
+      # @books = Book.where(id: @user.rend1, id: @user.rend2, id: @user.rend3)
     end
-    if @user.rend1 > 0
-      @book3 = Book.find(@user.rend3)
-    end
+    # if @user.rend1 > 0
+    #   @book1 = Book.find(@user.rend1)
+    # end
+    # if @user.rend1 > 0
+    #   @book2 = Book.find(@user.rend2)
+    # end
+    # if @user.rend1 > 0
+    #   @book3 = Book.find(@user.rend3)
+    # end
     # @books = Book.where(user_id: @user.id)
   end
 
   def new
     render plain: params[:user].inspect
   end
-
-  # def login
-  #   User.update_all(login: '')
-  #   @user = User.find(params[:id])
-  #   @user.login = true
-  #   @user.save
-  #   redirect_to :root
-  # end
 
   def login_name
     # @user = params[:name]
