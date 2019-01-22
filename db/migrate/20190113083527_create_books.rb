@@ -8,6 +8,7 @@ class CreateBooks < ActiveRecord::Migration[5.2]
       t.text    :summary     
       t.integer :user_id
       t.integer :number
+      t.text    :rend
 
       t.timestamps
     end

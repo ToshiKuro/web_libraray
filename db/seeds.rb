@@ -14,6 +14,7 @@
 @book.summary       = 'あのメジャー・リーガーも実践！ 170km/hを投げる為の投球術を科学的に図説'
 @book.user_id       = 0
 @book.number        = 3
+@book.rend          = '[貸出]'
 @book.save
 
 @book = Book.new
@@ -24,6 +25,7 @@
 @book.summary       = '著者が実践した、10万円から数億を稼ぐ方法を伝授'
 @book.user_id       = 0
 @book.number        = 1
+@book.rend          = '[貸出]'
 @book.save
 
 @book = Book.new
@@ -34,6 +36,7 @@
 @book.summary       = 'あの直木賞作家が、時代の波に流されてプログラマーになった男の壮絶な人生を描く'
 @book.user_id       = 0
 @book.number        = 5
+@book.rend          = '[貸出]'
 @book.save
 
 @book = Book.new
@@ -44,6 +47,7 @@
 @book.summary       = 'あの直木賞作家が、時代の波に流されてプログラマーになった男の壮絶な人生を描く'
 @book.user_id       = 0
 @book.number        = 5
+@book.rend          = '[貸出]'
 @book.save
 
 @book = Book.new
@@ -54,6 +58,7 @@
 @book.summary       = '全米が泣いた!! 衝撃の話題作'
 @book.user_id       = 0
 @book.number        = 1
+@book.rend          = '[貸出]'
 @book.save
 
 # @book = Book.new
@@ -110,12 +115,18 @@
 @user.name          = '鈴木一郎'
 @user.address       = '千葉県成田市'
 @user.login         = false
+@user.rend1         = 1
+@user.rend2         = 2
+@user.rend3         = 3
 @user.save
 
 @user = User.new
 @user.name          = '田中二郎'
 @user.address       = '神奈川県横浜市'
 @user.login         = false
+@user.rend1         = 0
+@user.rend2         = 0
+@user.rend3         = 0
 @user.save
 
 
@@ -123,6 +134,9 @@
 @user.name          = '佐藤三郎'
 @user.address       = '愛知県名古屋市'
 @user.login         = false
+@user.rend1         = 0
+@user.rend2         = 0
+@user.rend3         = 0
 @user.save
 
 
@@ -130,6 +144,9 @@
 @user.name          = '高橋四郎'
 @user.address       = '東京都千代田区'
 @user.login         = false
+@user.rend1         = 0
+@user.rend2         = 0
+@user.rend3         = 0
 @user.save
 
 
@@ -137,6 +154,9 @@
 @user.name          = '伊藤五郎'
 @user.address       = '福岡県福岡市'
 @user.login         = false
+@user.rend1         = 0
+@user.rend2         = 0
+@user.rend3         = 0
 @user.save
 
 

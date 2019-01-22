@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2019_01_14_125908) do
     t.text "summary"
     t.integer "user_id"
     t.integer "number"
+    t.text "rend"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -28,6 +29,9 @@ ActiveRecord::Schema.define(version: 2019_01_14_125908) do
     t.string "name"
     t.string "address"
     t.boolean "login"
+    t.integer "rend1"
+    t.integer "rend2"
+    t.integer "rend3"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

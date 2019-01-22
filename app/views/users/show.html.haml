@@ -3,12 +3,21 @@
 %table{border: 1}
   %p= '名　前：' + @user.name
   %p= '住　所：' + @user.address
+  = button_to 'ログアウト', {controller: 'users', action: 'logout'}, {method: :get}
 
 %table{border: 1}
   %tr
     %th タイトル
     %th 著者名
-  - @books.each do |book|
-    %tr
-      %td= book.title
-      %td= book.author
+    - if @user.rend1 > 0
+      %tr
+        %td= @book1.title
+        %td= @book1.author
+    - if @user.rend2 > 0
+      %tr
+        %td= @book2.title
+        %td= @book2.author
+    - if @user.rend3 > 0
+      %tr
+        %td= @book3.title
+        %td= @book3.author

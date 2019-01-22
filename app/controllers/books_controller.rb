@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
 
-  def top  
+  def top
+    @books = Book.all
   end
 
   def index
@@ -23,6 +24,29 @@ class BooksController < ApplicationController
   end
 
   def rend
+    # render plain: params[:id].inspect
+    @book = Book.find(params[:id])
+    @user = User.find_by(login: true)    
+    if @user.rend1 == 0
+      @user.rend1 = @book.id
+      @book.number -= 1
+      @book.save
+      render '/users/show'
+    elsif @user.rend2 == 0
+      @user.rend2 = @book.id
+      @book.number -= 1
+      @book.save
+      render '/users/show'
+    elsif @user.rend3 == 0
+      @user.rend3 = @book.id
+      @book.number -= 1
+      @book.save
+      render '/users/show'
+    else
+      # redirect_to '/users/show'
+      redirect_to '/users/show', alert: '貸出数が最大です'
+    end
+    # render '/users/show'    
   end
 
   private
