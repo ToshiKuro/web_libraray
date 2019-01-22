@@ -1,0 +1,2 @@
+class Lental < ApplicationRecord
+end
