@@ -22,5 +22,6 @@
           %td= book.genre
           - d = @lentals.find_by(book_id: book.id).updated_at + 14.days
           %td= d.strftime('%Y-%m-%d')
+          %td= link_to '返却', lentals_return_path(book) 
 
   %p= notice

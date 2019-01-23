@@ -16,7 +16,7 @@
       %td= book.number
       %td= book.user_id
       -if book.number > 0
-        %td= link_to book.rend, book_rend_path(book)
+        %td= link_to book.rend, lentals_rent_path(book)
       -else
         %td= ''
 

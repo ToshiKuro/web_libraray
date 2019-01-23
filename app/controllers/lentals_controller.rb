@@ -17,7 +17,14 @@ class LentalsController < ApplicationController
   end
 
   def return
-    
+    @book = Book.find(params[:id])
+    @user = User.find_by(login: true)
+    @lental = Lental.find_by(user_id: @user.id, book_id: @book.id)
+    @lental.book_id = 0
+    @lental.save
+    @book.number += 1
+    @book.save
+    redirect_to controller: 'users', action: 'show'
   end
 
 end

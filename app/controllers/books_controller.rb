@@ -9,7 +9,7 @@ class BooksController < ApplicationController
   end
 
   def show
-    # @books = Book.where(id: @lentals.book_id)
+    @book = Book.find(params[:id])
   end
 
   def new
