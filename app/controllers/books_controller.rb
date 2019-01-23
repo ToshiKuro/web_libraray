@@ -9,7 +9,7 @@ class BooksController < ApplicationController
   end
 
   def show
-    @book = Book.find(params[:id])
+    # @books = Book.where(id: @lentals.book_id)
   end
 
   def new
@@ -21,35 +21,6 @@ class BooksController < ApplicationController
   end
 
   def destroy
-  end
-
-  def rend
-    # render plain: params[:id].inspect
-    @book = Book.find(params[:id])
-    @user = User.find_by(login: true)    
-    if @user.rend1 == 0
-      @user.rend1 = @book.id
-      @user.save
-      @book.number -= 1
-      @book.save
-      redirect_to controller: 'users', action: 'show'
-    elsif @user.rend2 == 0
-      @user.rend2 = @book.id
-      @user.save
-      @book.number -= 1
-      @book.save
-      redirect_to controller: 'users', action: 'show'
-    elsif @user.rend3 == 0
-      @user.rend3 = @book.id
-      @user.save
-      @book.number -= 1
-      @book.save
-      redirect_to controller: 'users', action: 'show'
-    else
-      # redirect_to '/users/show'
-      redirect_to controller: 'users', action: 'show', notice: '貸出数が最大です'
-    end
-    # render '/users/show'    
   end
 
   private

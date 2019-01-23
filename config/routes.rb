@@ -16,5 +16,7 @@ Rails.application.routes.draw do
   get 'books/rend/:id', to: 'books#rend', as: 'book_rend'
   get 'books/update'
   get 'books/destroy'
+
+  get 'lentals/:id', to: 'lentals#rent', as: 'lentals_rent'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
