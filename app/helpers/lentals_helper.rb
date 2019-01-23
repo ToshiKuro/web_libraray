@@ -1,0 +1,2 @@
+module LentalsHelper
+end

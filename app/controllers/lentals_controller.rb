@@ -1,0 +1,2 @@
+class LentalsController < ApplicationController
+end

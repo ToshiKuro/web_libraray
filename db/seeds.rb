@@ -159,4 +159,79 @@
 @user.rend3         = 0
 @user.save
 
+@lental = Lental.new
+@lental.user_id = 1
+@lental.book_id = 0
+@lental.save
+
+@lental = Lental.new
+@lental.user_id = 1
+@lental.book_id = 0
+@lental.save
+
+@lental = Lental.new
+@lental.user_id = 1
+@lental.book_id = 0
+@lental.save
+
+@lental = Lental.new
+@lental.user_id = 2
+@lental.book_id = 0
+@lental.save
+
+@lental = Lental.new
+@lental.user_id = 2
+@lental.book_id = 0
+@lental.save
+
+@lental = Lental.new
+@lental.user_id = 2
+@lental.book_id = 0
+@lental.save
+
+@lental = Lental.new
+@lental.user_id = 3
+@lental.book_id = 0
+@lental.save
+
+@lental = Lental.new
+@lental.user_id = 3
+@lental.book_id = 0
+@lental.save
+
+@lental = Lental.new
+@lental.user_id = 3
+@lental.book_id = 0
+@lental.save
+
+@lental = Lental.new
+@lental.user_id = 4
+@lental.book_id = 0
+@lental.save
+
+@lental = Lental.new
+@lental.user_id = 4
+@lental.book_id = 0
+@lental.save
+
+@lental = Lental.new
+@lental.user_id = 4
+@lental.book_id = 0
+@lental.save
+
+@lental = Lental.new
+@lental.user_id = 5
+@lental.book_id = 0
+@lental.save
+
+@lental = Lental.new
+@lental.user_id = 5
+@lental.book_id = 0
+@lental.save
+
+@lental = Lental.new
+@lental.user_id = 5
+@lental.book_id = 0
+@lental.save
+
 
