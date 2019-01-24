@@ -23,11 +23,13 @@
           - if User.find_by(login: true) == nil
             %li= link_to '貸出', users_login_name_path(@user)
           - else
-            %li= link_to '貸出', users_index_path(@user)
+            %li= link_to '貸出', books_index_path(@user)
 
           - if User.find_by(login: true) == nil
             %li= link_to '利用者ページ', users_login_name_path(@user)
           - else
             %li= link_to '利用者ページ', user_show_path(@user)
+
+          %li= link_to '管理者ページ', books_login_owner_path(@book)
 
       = yield

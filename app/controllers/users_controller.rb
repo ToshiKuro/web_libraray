@@ -21,15 +21,18 @@ class UsersController < ApplicationController
   end
 
   def new
-    render plain: params[:user].inspect
+  end
+
+  def create    
+    @user = User.create(user_params)
+    redirect_to '/users/show'
   end
 
   def login_name
-    # @user = params[:name]
+    @user = params[:name]
   end
 
   def login
-    # render plain: params[:user].inspect
     User.update_all(login: false)
     @user = User.find_by(name: params[:user][:name])
     @user.login = true
@@ -42,4 +45,14 @@ class UsersController < ApplicationController
     redirect_to controller: 'books', action: 'top'
   end
 
+
+  private
+
+  def user_params
+    params.require(:user).permit(:name,:address)
+  end
+
 end
+
+
+    # render plain: params[:user].inspect

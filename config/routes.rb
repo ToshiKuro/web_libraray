@@ -11,11 +11,14 @@ Rails.application.routes.draw do
 
   get 'books/top'
   get 'books/index'
-  get 'books/:id', to: 'books#show', as: 'book_show'
-  post 'books' => 'books#new'
+  get 'books/show/:id', to: 'books#show', as: 'book_show'
+  get 'books/new', to:'books#new'
+  get 'books/login_owner', to: 'books#login_owner'
+  post 'login_owner_check', to: 'books#login_owner_check'
+  get 'books/owner'
+  post 'books', to: 'books#create'
+  delete 'books/delete/:id', to: 'books#destroy', as: 'book_delete'
   get 'books/rend/:id', to: 'books#rend', as: 'book_rend'
-  get 'books/update'
-  get 'books/destroy'
 
   get 'lentals/:id', to: 'lentals#rent', as: 'lentals_rent'
   get 'lentals/return/:id', to: 'lentals#return', as: 'lentals_return'

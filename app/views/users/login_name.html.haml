@@ -4,3 +4,5 @@
   = f.label :name
   = f.text_field :name
   = f.submit 'Login', data: {confirm: 'ログインしますか？'}
+
+= button_to '新規登録', {controller: 'users', action: 'new'}, {method: :get}

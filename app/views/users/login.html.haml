@@ -1,4 +1,16 @@
+%h2 利用者ログイン
+
 = form_for :user,url: login_path do |f|
   = f.label :name
   = f.text_field :name
-  = f.submit
+  = f.submit 'Login', data: {confirm: 'ログインしますか？'}
+
+= button_to '新規登録', {controller: 'users', action: 'new'}, {method: :get}
+
+
+
+/ = form_for :user,url: login_path do |f|
+/   = f.label :name
+/   = f.text_field :name
+/   = f.submit
+

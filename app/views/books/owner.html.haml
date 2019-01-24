@@ -1,3 +1,6 @@
+%h2 管理者のページ
+= button_to '書籍登録', {controller: 'books', action: 'new'}, {method: :get}
+
 %h2 書籍一覧
 %table{border: 1}
   %tr
@@ -13,8 +16,5 @@
       %td= book.author
       %td= book.genre
       %td= book.number
-      -if book.number > 0
-        %td= link_to '貸出', lentals_rent_path(book)
-      -else
-        %td= ''
+      %td= link_to '削除', book_delete_path(book), method: :delete, data: {confirm: '削除しますか？'}
 

@@ -1,2 +1,8 @@
-%h1 Users#new
-%p Find me in app/views/users/new.html.erb
+%h2 利用者新規登録
+
+= form_for User.new do |f|
+  = f.label :name
+  = f.text_field :name
+  = f.label :address
+  = f.text_field :address
+  = f.submit '登録'

@@ -5,10 +5,8 @@ class CreateBooks < ActiveRecord::Migration[5.2]
       t.string  :author
       t.string  :genre
       t.string  :date_of_issue
-      t.text    :summary     
-      t.integer :user_id
+      t.text    :summary
       t.integer :number
-      t.text    :rend
 
       t.timestamps
     end
