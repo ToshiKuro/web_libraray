@@ -27,4 +27,8 @@ class LentalsController < ApplicationController
     redirect_to controller: 'users', action: 'show'
   end
 
+  def create
+    
+  end
+
 end

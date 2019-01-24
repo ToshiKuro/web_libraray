@@ -32,7 +32,7 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.create(book_params)
-    redirect_to '/books/owner'
+    redirect_to action: 'owner'
   end
 
   def update
@@ -41,7 +41,7 @@ class BooksController < ApplicationController
   def destroy
     @book = Book.find(params[:id])
     @book.destroy
-    redirect_to '/books/owner'
+    redirect_to action: 'owner'
   end
 
   private
