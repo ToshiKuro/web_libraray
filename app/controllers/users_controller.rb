@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by(login: true)
+    @user = User.get_login_user
     @lentals = Lental.where( 'user_id = ? and book_id > ?', @user.id, 0)
     n = @lentals.count
     array = []
