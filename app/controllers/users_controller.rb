@@ -25,7 +25,7 @@ class UsersController < ApplicationController
 
   def create    
     @user = User.create(user_params)
-    redirect_to action: 'login_name'
+    redirect_to controller: 'lentals', action: 'create'
   end
 
   def login_name
@@ -37,7 +37,7 @@ class UsersController < ApplicationController
     @user = User.find_by(name: params[:user][:name])
     @user.login = true
     @user.save
-    redirect_to action: 'show'
+    redirect_to controller: 'books', action: 'top'
   end
 
   def logout
@@ -49,7 +49,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name,:address)
+    params.require(:user).permit(:name, :address)
   end
 
 end

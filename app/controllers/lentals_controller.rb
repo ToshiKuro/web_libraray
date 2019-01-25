@@ -28,7 +28,14 @@ class LentalsController < ApplicationController
   end
 
   def create
-    
+    @user = User.find_by(name: params[:name])
+    (1..3).each do |new|
+      @lental = Lental.new
+      @lental.user_id = @user.id
+      @lental.book_id = 0
+      @lental.save
+    end
+    redirect_to controller: 'users', action: 'login'
   end
 
 end

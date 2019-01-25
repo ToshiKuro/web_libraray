@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get 'books/top'
   get 'books/index'
   get 'books/show/:id', to: 'books#show', as: 'book_show'
-  get 'books/new', to:'books#new'
+  get 'books/new', to: 'books#new'
   get 'books/login_owner', to: 'books#login_owner'
   post 'login_owner_check', to: 'books#login_owner_check'
   get 'books/owner'
@@ -21,8 +21,9 @@ Rails.application.routes.draw do
   delete 'books/delete/:id', to: 'books#destroy', as: 'book_delete'
   get 'books/rend/:id', to: 'books#rend', as: 'book_rend'
 
-  get 'lentals/:id', to: 'lentals#rent', as: 'lentals_rent'
+  get 'lentals/rent/:id', to: 'lentals#rent', as: 'lentals_rent'
   get 'lentals/return/:id', to: 'lentals#return', as: 'lentals_return'
+  get 'lentals/create'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

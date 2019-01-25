@@ -105,18 +105,12 @@
 @user.name          = '鈴木一郎'
 @user.address       = '千葉県成田市'
 @user.login         = false
-@user.rend1         = 1
-@user.rend2         = 2
-@user.rend3         = 3
 @user.save
 
 @user = User.new
 @user.name          = '田中二郎'
 @user.address       = '神奈川県横浜市'
 @user.login         = false
-@user.rend1         = 0
-@user.rend2         = 0
-@user.rend3         = 0
 @user.save
 
 
@@ -124,9 +118,6 @@
 @user.name          = '佐藤三郎'
 @user.address       = '愛知県名古屋市'
 @user.login         = false
-@user.rend1         = 0
-@user.rend2         = 0
-@user.rend3         = 0
 @user.save
 
 
@@ -134,9 +125,6 @@
 @user.name          = '高橋四郎'
 @user.address       = '東京都千代田区'
 @user.login         = false
-@user.rend1         = 0
-@user.rend2         = 0
-@user.rend3         = 0
 @user.save
 
 
@@ -144,9 +132,6 @@
 @user.name          = '伊藤五郎'
 @user.address       = '福岡県福岡市'
 @user.login         = false
-@user.rend1         = 0
-@user.rend2         = 0
-@user.rend3         = 0
 @user.save
 
 @lental = Lental.new
