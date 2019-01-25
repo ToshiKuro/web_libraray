@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       @books = 0
     else
       n -= 1
-      (0..n).each do |m|
+      0.upto(n) do |m|
         array.push(@lentals.all[m].book_id)
       end
       @books = Book.find(array)
@@ -24,8 +24,11 @@ class UsersController < ApplicationController
   end
 
   def create    
-    @user = User.create(user_params)
-    redirect_to controller: 'lentals', action: 'create'
+    user = User.create(user_params)
+    3.times do
+      Lental.create(user_id: user.id, book_id: 0)
+    end
+    redirect_to action: 'login_name'
   end
 
   def login_name
