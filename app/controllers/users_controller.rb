@@ -1,23 +1,16 @@
 class UsersController < ApplicationController
 
+  require 'user.rb'
+
   def index
     @users = User.all
   end
 
   def show
-    @user = User.get_login_user
-    @lentals = Lental.where( 'user_id = ? and book_id > ?', @user.id, 0)
-    n = @lentals.count
-    array = []
-    if n == 0
-      @books = 0
-    else
-      n -= 1
-      0.upto(n) do |m|
-        array.push(@lentals.all[m].book_id)
-      end
-      @books = Book.find(array)
-    end
+    @user = User.find_by(login: true)
+    @lentals = Lental.where('user_id = ? and book_id > ?', @user.id, 0)
+    @lentals == [] ? @books = 0  : @books = Book.find(@lentals.pluck(:book_id))
+    # User.find_by(login: true).get_rental_books
   end
 
   def new
